@@ -39,7 +39,7 @@ def main(source_dir, target_dir, num_videos):
 
     for subdir in source_dir.iterdir():
         if subdir.is_dir():
-            video_files = [file for file in subdir.iterdir() if file.suffix == ".mp4"]
+            video_files = [file for file in subdir.iterdir()]
             selected_videos = random.sample(
                 video_files, min(num_videos, len(video_files))
             )
